@@ -36,9 +36,21 @@ public class PlayerMovement : MonoBehaviour
 			
 		Vector2 move = new Vector2 (x_move, 0);
 
-		body.velocity = move * speed;
+        // speed buffer
+        /*
+        if (x_move == 0 && (int)body.velocity.x != 0)
+        {
+            float speedBuffer = Mathf.Lerp(body.velocity.x,0,0.1f);
+            move.x = speedBuffer;
+            body.velocity = move * speed;
+        }
+        else
+            body.velocity = move * speed;
+        */
 
-		body.position = new Vector2 (Mathf.Clamp (body.position.x, bounds.xMin, bounds.xMax), body.position.y);
+        body.velocity = move * speed;
+
+        body.position = new Vector2 (Mathf.Clamp (body.position.x, bounds.xMin, bounds.xMax), body.position.y);
 
         //anim.SetFloat ("Speed", move.x);
 
