@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pearl
+  - Enemy-A
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 	public static ScoreManager instance;
-	public Text p_text;
+	public Text p_text, d_text;
 	int count;
 
 	void Awake ()
@@ -27,12 +27,12 @@ public class ScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		d_text.text = Mathf.Abs (Time.time).ToString ("0,0") + "m";
 	}
 
-	public void UpdatePearls ()
+	public void UpdatePearls (int amt)
 	{
-		count++;
+		count += amt;
 		p_text.text = count.ToString ("00");
 	}
 }

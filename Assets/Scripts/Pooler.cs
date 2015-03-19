@@ -2,50 +2,79 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public class Constants
+{
+	public static float moveSpeed = 6;
+}
+
+public class Boundary
+{
+	public static float xMin = -2.1f, xMax = 2.1f, startPos = -5.4f;
+}
+
 public class Pooler: MonoBehaviour
 {
-	public GameObject pearl;
-	public float yStartPos;
-	Boundary bounds;
-	public List<GameObject> p_list;
+	public List<GameObject> objPoolList;
+	public Vector2 timeVals;
+	public int amount;
+	public bool rand;
+	List<GameObject> p_list;
 
 	void Start ()
 	{
-		bounds = new Boundary ();
-		p_list = createPool (10, pearl, 0);
-		StartCoroutine ("SpawnPearls");
+		p_list = createPool (amount, objPoolList);
+		StartCoroutine ("SpawnPool");
 	}
 
-
-
-	public static List<GameObject> createPool (int amount, GameObject obj, float offset)
+	public List<GameObject> createPool (int amount, List<GameObject> objList)
 	{
 		List<GameObject> tempList = new List<GameObject> ();
 		for (int i = 0; i < amount; i++) {
+			GameObject obj = GetObj (objList, rand);
 			GameObject temp = (GameObject)Instantiate (obj, obj.transform.position, Quaternion.identity);
-			temp.transform.position = new Vector3 (temp.transform.position.x, i * offset, temp.transform.position.z);
-			temp.name += temp.name + (i + 1).ToString ("00");
+			//temp.transform.position = new Vector3 (temp.transform.position.x, i * offset, temp.transform.position.z);
+			temp.name += (i + 1).ToString ("00");
 			temp.SetActive (false);
 			tempList.Add (temp);
 		}
-
+		
 		return tempList;
-
+		
 	}
-	// Update is called once per frame
-	void Update ()
+	GameObject GetObj (List<GameObject> randList, bool random)
 	{
+		if (randList.Count == 1) {
+			return randList [0];
+		} else {
+			if (random) {
+				int randInt = Random.Range (0, randList.Count);
+				return randList [randInt];
+			} else {
+				int num = Random.Range (0, 100);
+				int len = randList.Count;
+				if (num <= 75) {
+					return randList [0];
+				} else if (num > 75 && num <= 90) {
+					return randList [0];
+				} else if (num > 90 && num < 98) {
+					return randList [2];
+				} else if (num >= 98 && num <= 99) {
+					return randList [3];
+				} else {
+					return randList [0];
+				}
+			}
+		}
 
-	
 	}
 
-	IEnumerator SpawnPearls ()
+	IEnumerator SpawnPool ()
 	{
 		while (true) {
-			yield return new WaitForSeconds (Random.Range (1, 3));
+			yield return new WaitForSeconds (Random.Range (timeVals.x, timeVals.y));
 			for (int i = 0; i < p_list.Count; i++) {
 				if (!p_list [i].activeInHierarchy) {
-					p_list [i].transform.position = new Vector3 (Random.Range (-2.1f, 2.1f), -5.3f, p_list [i].transform.position.z);
+					p_list [i].transform.position = new Vector3 (Random.Range (Boundary.xMin, Boundary.xMax), Boundary.startPos, p_list [i].transform.position.z);
 					p_list [i].SetActive (true);
 					break;
 				}
@@ -53,3 +82,4 @@ public class Pooler: MonoBehaviour
 		}
 	}
 }
+

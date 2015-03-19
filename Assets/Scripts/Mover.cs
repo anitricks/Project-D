@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Mover : MonoBehaviour
 {
-	
+	public int num;
 	Rigidbody2D body;
 
 	void Start ()
@@ -12,7 +12,7 @@ public class Mover : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
 	{
 		body.velocity = new Vector2 (0, Constants.moveSpeed);
 
@@ -21,6 +21,10 @@ public class Mover : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.tag == "Finish") {
+			gameObject.SetActive (false);
+		}
+
+		if (gameObject.tag == "Pearl" && other.tag == "Enemy-A") {
 			gameObject.SetActive (false);
 		}
 	}
