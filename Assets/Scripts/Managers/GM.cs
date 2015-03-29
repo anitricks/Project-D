@@ -8,11 +8,14 @@ public class GM : MonoBehaviour
     // other managers here
 
     public Starfish _player { get; private set; }
+    public PixelPerfextCam _mainCam { get; private set; }
 
     void Awake()
     {
         _instance = this;
 
+        _mainCam = Camera.main.GetComponent<PixelPerfextCam>();
+        //_mainCam = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<PixelPerfextCam>();
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Starfish>();
     }
 

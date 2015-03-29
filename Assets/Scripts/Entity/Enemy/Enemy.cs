@@ -38,6 +38,6 @@ public abstract class Enemy : Entity
 
     private void SomethingHappens()
     {
-        Debug.Log("hit");
+        Debug.Log("the shit's going down BITCH!");
     }
 }
