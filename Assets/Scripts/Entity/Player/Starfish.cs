@@ -23,7 +23,7 @@ public class Starfish : Entity
 
     protected override void FixedUpdate()
     {
-        base.FixedUpdate();
+        //base.FixedUpdate();
 
         float x = Input.GetAxis("Horizontal");
 

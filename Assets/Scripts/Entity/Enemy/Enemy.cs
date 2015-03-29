@@ -13,28 +13,17 @@ public abstract class Enemy : Entity
 
     protected override void FixedUpdate()
     {
-        base.FixedUpdate();
+        //base.FixedUpdate();
 
         // movement
-        MoveUp();
+        MoveUp(_moveSpeed);
 
         // check collision
         if (CollidePlayer())
             SomethingHappens();
     }
 
-    private void MoveUp()
-    {
-        _trans.Translate(0, _moveSpeed * Time.deltaTime, 0);
-    }
 
-    private bool CollidePlayer()
-    {
-        if (GM._instance == null || GM._instance._player == null)
-            return false;
-
-        return _bound.Intersects(GM._instance._player._bound);
-    }
 
     private void SomethingHappens()
     {

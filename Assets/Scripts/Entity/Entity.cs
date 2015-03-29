@@ -21,18 +21,25 @@ public abstract class Entity : MonoBehaviour
         _texHeight = _renderer.bounds.size.y;
         _texWidth = _renderer.bounds.size.x;
 
-
-
     }
 
-    protected virtual void FixedUpdate()
-    {
-        //KeepInBound();
-    }
-
+    protected abstract void FixedUpdate();
 
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(_bound.center, _bound.size);
+    }
+
+    protected bool CollidePlayer()
+    {
+        if (GM._instance == null || GM._instance._player == null)
+            return false;
+
+        return _bound.Intersects(GM._instance._player._bound);
+    }
+
+    protected void MoveUp(float speed)
+    {
+        _trans.Translate(0, speed * Time.deltaTime, 0);
     }
 }

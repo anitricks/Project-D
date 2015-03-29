@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class GM : MonoBehaviour
 {
+
     public static GM _instance { get; private set; }
     // other managers here
 
@@ -19,15 +20,10 @@ public class GM : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Starfish>();
     }
 
-    void OnLevelWasLoaded(int level)
-    {
-
-    }
-
-
     void InitGame()
     {
-
+        if (_player == null)
+            Debug.Log("create player here");
     }
 
 }
