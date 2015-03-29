@@ -13,7 +13,7 @@ public class GM : MonoBehaviour
     {
         _instance = this;
 
-        _player = GameObject.Find("Player").GetComponent<Starfish>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Starfish>();
     }
 
     void OnLevelWasLoaded(int level)
@@ -21,5 +21,10 @@ public class GM : MonoBehaviour
 
     }
 
+
+    void InitGame()
+    {
+
+    }
 
 }
