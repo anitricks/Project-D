@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 51fc9fae1340e441988aa694987011c2
+timeCreated: 1427585067
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: button
+    21300002: bubble_bomb
+    21300004: button_add
+    21300006: button)_info
+    21300008: speed_boost
+    21300010: pearl_pink
+    21300012: button_music
+    21300014: button_no_music
+    21300016: button_play
+    21300018: button_store
+    21300020: pearl_red
+    21300022: pearl_black
+    21300024: pearl_green
+    21300026: bubble_shield
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: button
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 413
+        width: 241
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bubble_bomb
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 368
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_add
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 437
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button)_info
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 314
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: speed_boost
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 296
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pearl_pink
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 367
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_music
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 137
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_no_music
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 83
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_play
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 224
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_store
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 135
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pearl_red
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 364
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pearl_black
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 301
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pearl_green
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 295
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bubble_shield
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 232
+        width: 110
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,7 +14,7 @@ public class Mover : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		body.velocity = new Vector2 (0, Constants.moveSpeed);
+		body.velocity = new Vector2 (0, num);
 
 	}
 

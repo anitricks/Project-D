@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 0
+  num: 4
 --- !u!58 &158606778
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 50
+  num: 6
 --- !u!58 &235606891
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -362,7 +362,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 273036316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream:Assets/Scenes/T/scene0.unity
   m_LocalPosition: {x: -.0900000036, y: 3.6099999, z: -.49000001}
+=======
+  m_LocalPosition: {x: -.0900000036, y: 3.6099999, z: -2.32999992}
+>>>>>>> Stashed changes:Assets/Scenes/scene0.unity
   m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
   m_Children: []
   m_Father: {fileID: 0}
@@ -662,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 0
+  num: 10
 --- !u!58 &543229407
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -783,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 0
+  num: 7
 --- !u!50 &743306841
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -854,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &965161457
 Transform:
   m_ObjectHideFlags: 0
@@ -900,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 1
+  num: 6
 --- !u!58 &1378367367
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -938,7 +942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e64627a8e4e584c45a03ae96aaaac554, type: 3}
+  m_Sprite: {fileID: 21300010, guid: 51fc9fae1340e441988aa694987011c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1378367369
 Transform:
@@ -1012,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 5
+  num: 6
 --- !u!58 &1396654188
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1164,7 +1168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1597648228
 Transform:
   m_ObjectHideFlags: 0
@@ -1238,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81e4c2f17ac43e99a95458cea4595a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 15
+  num: 6
 --- !u!58 &1605537752
 CircleCollider2D:
   m_ObjectHideFlags: 0
