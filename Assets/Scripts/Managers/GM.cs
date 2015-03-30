@@ -53,6 +53,7 @@ public class GM : MonoBehaviour
 
         //  init state
         UpdateGameState(GameState.IN_GAME);
+
     }
 
     void InitGame(int playerIndex = 0)
@@ -85,5 +86,46 @@ public class GM : MonoBehaviour
         }
     }
 }
+
+public class EnemyGenerator : MonoBehaviour
+{
+    private float coolDown;
+    private float timer = 0;
+
+    private int poolAmt = 4;
+
+    private List<Enemy> enemy1;
+    private List<Enemy> enemy2;
+    private List<Enemy> enemy3;
+
+    public EnemyGenerator(float rate)
+    {
+        coolDown = rate;
+
+
+
+    }
+
+    public void Update(float dt)
+    {
+        timer += dt;
+
+        if (timer >= coolDown)
+        {
+            timer -= coolDown;
+            Spawn();
+        }
+    }
+
+    private void Spawn()
+    {
+
+    }
+
+
+
+
+}
+
 
 

@@ -10,12 +10,13 @@ public abstract class Enemy : Entity
 
     protected override void Start()
     {
+        base.Start();
         _moveSpeed = 2;
     }
 
     protected override void FixedUpdate()
     {
-        //base.FixedUpdate();
+        base.FixedUpdate();
 
         // movement
         MoveUp(_moveSpeed);

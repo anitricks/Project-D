@@ -15,6 +15,8 @@ public abstract class Entity : MonoBehaviour
 
     public Bounds _bound { get { if (_renderer)return _renderer.bounds; else return GetComponent<SpriteRenderer>().bounds; } private set { } }
 
+    protected float _outOfBoundPosY { get; private set; }
+
     protected virtual void Awake()
     {
         _trans = GetComponent<Transform>();
@@ -23,11 +25,22 @@ public abstract class Entity : MonoBehaviour
         _texHeight = _renderer.bounds.size.y;
         _texWidth = _renderer.bounds.size.x;
 
+
     }
 
-    protected abstract void Start();
-    protected abstract void FixedUpdate();
+    protected virtual void Start()
+    {
+        _outOfBoundPosY = GM._instance._mainCam.camHalfHeight + _bound.size.y;
+        Debug.Log(_outOfBoundPosY);
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        OutOfBound();
+    }
+
     protected abstract void OnCollision();
+
 
     void OnDrawGizmos()
     {
@@ -46,4 +59,18 @@ public abstract class Entity : MonoBehaviour
     {
         _trans.Translate(0, speed * Time.deltaTime, 0);
     }
+
+    protected void OutOfBound()
+    {
+        if (_trans.position.y >= _outOfBoundPosY)
+        {
+            Debug.Log("out");
+
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+    }
+
+
+
 }

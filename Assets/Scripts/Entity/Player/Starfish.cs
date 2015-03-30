@@ -14,6 +14,8 @@ public class Starfish : Entity
 
     protected override void Start()
     {
+        base.Start();
+
         screenBound = GM._instance._mainCam.camHalfWidth - _bound.size.x / 2;
 
         _moveSpeed = 4;

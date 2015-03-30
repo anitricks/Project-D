@@ -8,6 +8,7 @@ public class Pearl : Item
 
     protected override void Start()
     {
+        base.Start();
         _moveSpeed = 1;
     }
 
