@@ -3,12 +3,14 @@ using System.Collections;
 
 public abstract class Enemy : Entity
 {
-    [Range(0, 4)]
-    public float _moveSpeed;
-
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    protected override void Start()
+    {
+        _moveSpeed = 2;
     }
 
     protected override void FixedUpdate()
@@ -20,13 +22,16 @@ public abstract class Enemy : Entity
 
         // check collision
         if (CollidePlayer())
-            SomethingHappens();
+            OnCollision();
     }
 
-
-
-    private void SomethingHappens()
+    protected override void OnCollision()
     {
-        Debug.Log("the shit's going down BITCH!");
+        Debug.Log("end");
+
+        //throw new System.NotImplementedException();
+
+        // end game
     }
+
 }

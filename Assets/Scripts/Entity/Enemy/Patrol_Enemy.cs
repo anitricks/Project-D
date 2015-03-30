@@ -21,8 +21,9 @@ public class Patrol_Enemy : Enemy
         MoveLeftRight();
     }
 
-    void MoveLeftRight()
+    private void MoveLeftRight()
     {
+        // TODO: Lerp 
         float x = Mathf.PingPong(Time.time, maxDistance);
         _trans.position = new Vector2(initialX + x, _trans.position.y);
     }

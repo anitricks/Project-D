@@ -3,22 +3,20 @@ using System.Collections;
 
 public class Starfish : Entity
 {
-    public float moveSpeed = 2;
-    private byte inBoundHelper = 1;
+
     private float moveDir;
     private float screenBound;
-
 
     protected override void Awake()
     {
         base.Awake();
-
     }
 
-    void Start()
+    protected override void Start()
     {
         screenBound = GM._instance._mainCam.camHalfWidth - _bound.size.x / 2;
 
+        _moveSpeed = 4;
     }
 
     protected override void FixedUpdate()
@@ -26,32 +24,25 @@ public class Starfish : Entity
         //base.FixedUpdate();
 
         float x = Input.GetAxis("Horizontal");
-
-        float moveDis = x * moveSpeed * Time.deltaTime;
+        float moveDis = x * _moveSpeed * Time.deltaTime;
 
         // predict collision
         if (Mathf.Abs(_trans.position.x + moveDis) < screenBound)
             Move(moveDis);
-
-        // KeepInBound();
     }
 
     void Move(float dis)
     {
         _trans.Translate(dis, 0, 0);
-
     }
 
-    private void KeepInBound()
+    public void SetSprite(Sprite sprite)
     {
-        if (!GM._instance)
-            return;
+        _renderer.sprite = sprite;
+    }
 
-        if (GM._instance._mainCam.camHalfWidth - Mathf.Abs(_trans.position.x) <= _bound.size.x / 2)
-            _trans.position = _trans.position;
-        //inBoundHelper = 0;
-        //else
-        //inBoundHelper = 1;
-
+    protected override void OnCollision()
+    {
+        // do no thing
     }
 }

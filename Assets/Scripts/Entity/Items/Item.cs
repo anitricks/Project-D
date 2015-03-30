@@ -3,8 +3,6 @@ using System.Collections;
 
 public abstract class Item : Entity
 {
-    [Range(0, 4)]
-    public float _moveSpeed;
 
     protected override void FixedUpdate()
     {
@@ -15,5 +13,4 @@ public abstract class Item : Entity
             OnCollision();
     }
 
-    protected abstract void OnCollision();
 }

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 51fc9fae1340e441988aa694987011c2
-timeCreated: 1427585067
-licenseType: Pro
+timeCreated: 1427744843
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: button
@@ -21,7 +21,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -43,7 +43,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -116,10 +116,10 @@ TextureImporter:
     - name: pearl_pink
       rect:
         serializedVersion: 2
-        x: 443
-        y: 367
-        width: 63
-        height: 59
+        x: 448
+        y: 371
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,30 +166,30 @@ TextureImporter:
     - name: pearl_red
       rect:
         serializedVersion: 2
-        x: 371
-        y: 364
-        width: 63
-        height: 59
+        x: 378
+        y: 369
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: pearl_black
       rect:
         serializedVersion: 2
-        x: 371
-        y: 301
-        width: 65
-        height: 61
+        x: 377
+        y: 304
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: pearl_green
       rect:
         serializedVersion: 2
-        x: 439
-        y: 295
-        width: 71
-        height: 65
+        x: 447
+        y: 300
+        width: 54
+        height: 55
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

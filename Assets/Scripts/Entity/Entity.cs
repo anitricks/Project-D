@@ -9,6 +9,8 @@ public abstract class Entity : MonoBehaviour
     public SpriteRenderer _renderer { get; private set; }
     public float _texWidth { get; private set; }
     public float _texHeight { get; private set; }
+
+    public float _moveSpeed { get; protected set; }
     //public float _renderMaterial { get; private set; }
 
     public Bounds _bound { get { if (_renderer)return _renderer.bounds; else return GetComponent<SpriteRenderer>().bounds; } private set { } }
@@ -23,7 +25,9 @@ public abstract class Entity : MonoBehaviour
 
     }
 
+    protected abstract void Start();
     protected abstract void FixedUpdate();
+    protected abstract void OnCollision();
 
     void OnDrawGizmos()
     {
