@@ -85,6 +85,11 @@ public class GM : MonoBehaviour
                 break;
         }
     }
+
+    IEnumerator Spawn()
+    { 
+        yield return new WaitForSeconds(1f);
+    }
 }
 
 public class EnemyGenerator : MonoBehaviour
